@@ -1,6 +1,6 @@
 [package]
 name = "regex"
-version = "1.3.1"  #:version
+version = "1.3.4"  #:version
 authors = ["The Rust Project Developers"]
 license = "MIT OR Apache-2.0"
 readme = "README.md"
@@ -13,11 +13,7 @@ finite automata and guarantees linear time matching on all inputs.
 """
 categories = ["text-processing"]
 autotests = false
-exclude = ["/.travis.yml", "/appveyor.yml", "/ci/*", "/scripts/*"]
-
-[badges]
-travis-ci = { repository = "rust-lang/regex" }
-appveyor = { repository = "rust-lang-libs/regex" }
+exclude = ["/scripts/*", "/.github/*"]
 
 [workspace]
 members = [
@@ -115,13 +111,13 @@ optional = true
 
 # For managing regex caches quickly across multiple threads.
 [dependencies.thread_local]
-version = "0.3.6"
+version = "1"
 optional = true
 
 # For parsing regular expressions.
 [dependencies.regex-syntax]
 path = "regex-syntax"
-version = "0.6.12"
+version = "0.6.14"
 default-features = false
 
 [dev-dependencies]
